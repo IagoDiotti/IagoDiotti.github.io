@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color:black; /* Cor sólida de fundo */
+    color: white;  /* Texto em branco para contraste */
 }
 
 .container {
@@ -12,12 +13,14 @@ body {
     padding: 20px;
 }
 
-/* Cabeçalho */
+/* Cabeçalho com degradê em tons de azul e roxo e bordas arredondadas */
 header {
     text-align: center;
-    background-color: #4CAF50;
+    background: linear-gradient(to bottom, #0000ff, #8a2be2); /* Degradê de azul para roxo */
     color: white;
     padding: 30px 0;
+    border-radius: 20px;  /* Bordas arredondadas */
+    margin-bottom: 20px;  /* Adicionando um pequeno espaço entre o cabeçalho e o resto da página */
 }
 
 header h1 {
@@ -30,27 +33,18 @@ header p {
     margin-top: 10px;
 }
 
-/* Estilo da Foto */
-.foto img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin-bottom: 20px;
-}
-
-/* Links das redes sociais */
-.links {
-    margin-top: 40px;
+/* Adicionando o degradê ao texto do .links h2 */
+.links h2 {
+    font-size: 1.8rem;
+    background: linear-gradient(to bottom, #0000ff, #8a2be2); /* Degradê de azul para roxo */
+    -webkit-background-clip: text; /* Faz o degradê aparecer apenas no texto */
+    background-clip: text; /* Define a propriedade padrão para compatibilidade */
+    color: transparent; /* Faz o texto ficar transparente para o degradê ser visível */
     text-align: center;
 }
 
-.links h2 {
-    font-size: 1.8rem;
-    color: #333;
-}
-
 .links ul {
+    text-align: center;
     list-style: none;
     padding: 0;
 }
@@ -61,13 +55,24 @@ header p {
 
 .links a {
     text-decoration: none;
-    color: #4CAF50;
+    color: linear-gradient(to bottom, #0000ff, #8a2be2); /* Degradê de azul para roxo */
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
 .links a:hover {
     color: #333;
+}
+
+/* Estilo da Foto */
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  /* Mantém o formato circular */
+    border: 3px solid white;
+    object-fit: cover;   /* Ajusta a imagem para cobrir a área sem distorção */
+    object-position: top; /* Alinha a imagem para cortar mais no topo */
+    margin-bottom: 20px;
 }
 
 /* Rodapé */
