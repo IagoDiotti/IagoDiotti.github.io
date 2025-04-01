@@ -1,59 +1,70 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0b032c;
-    color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 .container {
-    width: 100%;
-    max-width: 500px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
     text-align: center;
-    background-color: #192248;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px 0;
 }
 
-h1, p {
-    margin-bottom: 20px;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Links das redes sociais */
 .links {
-    margin-top: 30px;
+    margin-top: 40px;
+    text-align: center;
 }
 
-.link {
-    display: inline-block;
+.links h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 10px 0;
+}
+
+.links a {
     text-decoration: none;
-    color: #f1f1f1;
-    background-color: #333;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+    color: #4CAF50;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
-.link:hover {
-    background-color: #555;
+.links a:hover {
+    color: #333;
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-    .link {
-        padding: 10px 15px;
-        margin: 8px;
-    }
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #777;
 }
