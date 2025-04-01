@@ -21,13 +21,22 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    margin: 20px 0;
     font-size: 2.5rem;
 }
 
 header p {
     font-size: 1.2rem;
     margin-top: 10px;
+}
+
+/* Estilo da Foto */
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 20px;
 }
 
 /* Links das redes sociais */
