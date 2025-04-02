@@ -1,84 +1,115 @@
-/* Estilos Gerais */
+/* style.css */
+
+/* Estilos personalizados adicionais (se necessário) */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    /* Garante que o gradiente cubra toda a tela */
+    background-attachment: fixed;
+  }
+  
+  .profile-card {
+    /* Adiciona uma sombra mais suave e transições */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  .profile-card:hover {
+    /* Efeito de elevação no hover */
+    transform: translateY(-5px) scale(1.02); /* Leve ajuste na escala para não ficar igual ao do HTML */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 15px rgba(0, 0, 0, 0.06);
+  }
+  
+  .social-link .lucide {
+    /* Adiciona uma transição suave ao ícone */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-link:hover .lucide {
+    /* Efeito de escala no hover do ícone */
+    transform: scale(1.1);
+  }
+  
+  /* Define os caracteres específicos para os ícones Lucide (caso a fonte não carregue) */
+  /* É importante que estes códigos correspondam aos ícones corretos na fonte Lucide */
+  .lucide-github::before { content: '\e8a1'; } /* Código Unicode para GitHub em Lucide */
+  .lucide-linkedin::before { content: '\e8b0'; } /* Código Unicode para LinkedIn em Lucide */
+  .lucide-instagram::before { content: '\e8a9'; } /* Código Unicode para Instagram em Lucide */
+  
+  /* Estilos para leitores de tela */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
-    background-color:black; /* Cor sólida de fundo */
-    color: white;  /* Texto em branco para contraste */
-}
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Cabeçalho com degradê em tons de azul e roxo e bordas arredondadas */
-header {
+  .skills {
     text-align: center;
-    background: linear-gradient(to bottom, #0000ff, #8a2be2); /* Degradê de azul para roxo */
+    margin-top: 20px;
+  }
+  
+  .skill-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
     color: white;
-    padding: 30px 0;
-    border-radius: 20px;  /* Bordas arredondadas */
-    margin-bottom: 20px;  /* Adicionando um pequeno espaço entre o cabeçalho e o resto da página */
-}
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .skill-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  }
 
-header h1 {
-    margin: 20px 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-/* Adicionando o degradê ao texto do .links h2 */
-.links h2 {
-    font-size: 1.8rem;
-    background: linear-gradient(to bottom, #0000ff, #8a2be2); /* Degradê de azul para roxo */
-    -webkit-background-clip: text; /* Faz o degradê aparecer apenas no texto */
-    background-clip: text; /* Define a propriedade padrão para compatibilidade */
-    color: transparent; /* Faz o texto ficar transparente para o degradê ser visível */
+  .social-icons {
     text-align: center;
-}
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block; /* Alinha os elementos 'a' horizontalmente */
+    margin: 0 10px; /* Adiciona espaço entre os ícones */
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icons a:hover img{
+      opacity: 0.7;
+    }
 
-.links ul {
-    text-align: center;
-    list-style: none;
-    padding: 0;
-}
-
-.links li {
-    margin: 10px 0;
-}
-
-.links a {
-    text-decoration: none;
-    color: linear-gradient(to bottom, #0000ff, #8a2be2); /* Degradê de azul para roxo */
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.links a:hover {
-    color: #333;
-}
-
-/* Estilo da Foto */
-.foto img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;  /* Mantém o formato circular */
-    border: 3px solid white;
-    object-fit: cover;   /* Ajusta a imagem para cobrir a área sem distorção */
-    object-position: top; /* Alinha a imagem para cortar mais no topo */
-    margin-bottom: 20px;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 1rem;
-    color: #777;
-}
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Gradiente de fundo com cores vibrantes e movimento */
+        background: linear-gradient(45deg, #ff4e56, #ff9a62, #00c6ae, #3498db);
+        background-size: 400% 400%;
+        animation: animateBackground 15s ease infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Impede a barra de rolagem durante a animação */
+      }
+      
+      @keyframes animateBackground {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }

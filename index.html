@@ -1,33 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação Pessoal</title>
+    <title>Iago Diotti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="D:\downloads\fontawesome-free-6.7.2-web\fontawesome-free-6.7.2-web\css\all.min.css">
+    <style>
+      @font-face {
+        font-family: 'LucideIcons';
+        src: url(https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf) format('truetype');
+        font-display: block; /* Garante que o espaço seja reservado */
+      }
+      .lucide {
+        font-family: 'LucideIcons';
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* Fallback caso a fonte não carregue (melhor que texto) */
+        /* Removed unsupported 'speak' property */
+        display: inline-block; /* Necessário para alguns estilos */
+        vertical-align: middle; /* Alinha melhor com texto */
+      }
+      /* Estilos básicos para fallback (se a fonte falhar) */
+      .lucide-github::before { content: 'GH'; font-family: sans-serif; font-weight: bold; }
+      .lucide-linkedin::before { content: 'LI'; font-family: sans-serif; font-weight: bold; }
+      .lucide-instagram::before { content: 'IG'; font-family: sans-serif; font-weight: bold; }
+    </style>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Configuração do Tailwind (opcional)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="foto">
-                <img class="foto" src="minha_foto.jpg" alt="Foto de Iago Diotti">
-            </div>
-            <h1>Olá, eu sou Iago Diotti</h1>
-            <p>Sou estudante de ADS e estou sempre em busca de aprender mais sobre novas tecnologias.</p>
-        </header>
+<body class="animated-gradient flex items-center justify-center min-h-screen font-sans p-4">
 
-        <section class="links">
-            <h2>Me encontre nas redes sociais:</h2>
-            <ul>
-                <li><a href="https://www.instagram.com/iagodiotti" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/iago-viana-a9013a212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/IagoDiotti" target="_blank">GitHub</a></li>
-            </ul>
-        </section>
+    <div class="profile-card bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-10 text-center max-w-lg w-full mx-auto overflow-hidden relative transition-all duration-500 ease-out">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"></div>
 
-        <footer>
-            <p>&copy; 2025 Iago Diotti. Todos os direitos reservados.</p>
-        </footer>
+        <div class="mb-6 mt-4">
+             <img 
+                src="image.png"
+                alt="Foto de Iago Diotti"
+                class="foto" style="width: 9rem; height: 9rem; border-radius: 50%; margin: 0 auto; border: 4px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); object-fit: cover; transition: transform 0.3s; display: flex; align-items: flex-start; "
+            >
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 drop-shadow-sm">Iago Diotti</h1>
+         <p class="text-gray-700 mb-8 text-base md:text-lg px-4">Estudante de Análise e Desenvolvimento de Sistemas.</p>
+
+         <div class="skills">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">Python</span>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/iagodiotti" target="_blank">
+              <img src="instagram-brands.svg" alt="Instagram">
+            </a>
+            <a href="https://github.com/IagoDiotti" target="_blank">
+              <img style="font-size: 5px;" src="square-github-brands.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/IagoDiotti/" target="_blank">
+              <img src="linkedin-brands.svg" alt="LinkedIn">
+            </a>
+          </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
