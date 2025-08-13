@@ -1,115 +1,168 @@
-/* style.css */
+/* Reset Básico e Configurações Globais */
+:root {
+    --cor-primaria: #0e1111; /* Um cinza escuro, quase preto */
+    --cor-secundaria: #30c996; /* Um verde menta vibrante */
+    --cor-texto: #c9d1d9; /* Um cinza claro para texto */
+    --cor-fundo: #010409;
+}
 
-/* Estilos personalizados adicionais (se necessário) */
-body {
-    /* Garante que o gradiente cubra toda a tela */
-    background-attachment: fixed;
-  }
-  
-  .profile-card {
-    /* Adiciona uma sombra mais suave e transições */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  }
-  
-  .profile-card:hover {
-    /* Efeito de elevação no hover */
-    transform: translateY(-5px) scale(1.02); /* Leve ajuste na escala para não ficar igual ao do HTML */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 15px rgba(0, 0, 0, 0.06);
-  }
-  
-  .social-link .lucide {
-    /* Adiciona uma transição suave ao ícone */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .social-link:hover .lucide {
-    /* Efeito de escala no hover do ícone */
-    transform: scale(1.1);
-  }
-  
-  /* Define os caracteres específicos para os ícones Lucide (caso a fonte não carregue) */
-  /* É importante que estes códigos correspondam aos ícones corretos na fonte Lucide */
-  .lucide-github::before { content: '\e8a1'; } /* Código Unicode para GitHub em Lucide */
-  .lucide-linkedin::before { content: '\e8b0'; } /* Código Unicode para LinkedIn em Lucide */
-  .lucide-instagram::before { content: '\e8a9'; } /* Código Unicode para Instagram em Lucide */
-  
-  /* Estilos para leitores de tela */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
+* {
+    margin: 0;
     padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
+    box-sizing: border-box;
+}
 
-  .skills {
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(1, 4, 9, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Seções */
+section {
+    padding: 100px 0;
     text-align: center;
-    margin-top: 20px;
-  }
-  
-  .skill-badge {
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subtitulo-secao {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #8b949e; /* Cinza mais suave */
+}
+
+/* Seção de Apresentação */
+#apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa a tela inteira */
+    text-align: center;
+}
+
+#apresentacao h1 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+#apresentacao h2 {
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+}
+
+#apresentacao .subtitulo {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    color: white;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Habilidades */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: var(--cor-primaria);
     padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 20px;
-    margin: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .skill-badge:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
-  }
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    font-weight: 500;
+}
 
-  .social-icons {
+/* Jornada */
+.jornada-item {
+    background-color: var(--cor-primaria);
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.jornada-item h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.link-externo {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Footer (Contato) */
+footer {
+    background-color: var(--cor-primaria);
+    padding: 60px 0;
     text-align: center;
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    display: inline-block; /* Alinha os elementos 'a' horizontalmente */
-    margin: 0 10px; /* Adiciona espaço entre os ícones */
-  }
-  
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .social-icons a:hover img{
-      opacity: 0.7;
-    }
+}
 
-    body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        /* Gradiente de fundo com cores vibrantes e movimento */
-        background: linear-gradient(45deg, #ff4e56, #ff9a62, #00c6ae, #3498db);
-        background-size: 400% 400%;
-        animation: animateBackground 15s ease infinite;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden; /* Impede a barra de rolagem durante a animação */
-      }
-      
-      @keyframes animateBackground {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
+.social-links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--cor-secundaria);
+}

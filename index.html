@@ -1,88 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iago Diotti</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Iago Diotti - Desenvolvedor em Formação</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="D:\downloads\fontawesome-free-6.7.2-web\fontawesome-free-6.7.2-web\css\all.min.css">
-    <style>
-      @font-face {
-        font-family: 'LucideIcons';
-        src: url(https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf) format('truetype');
-        font-display: block; /* Garante que o espaço seja reservado */
-      }
-      .lucide {
-        font-family: 'LucideIcons';
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        /* Fallback caso a fonte não carregue (melhor que texto) */
-        /* Removed unsupported 'speak' property */
-        display: inline-block; /* Necessário para alguns estilos */
-        vertical-align: middle; /* Alinha melhor com texto */
-      }
-      /* Estilos básicos para fallback (se a fonte falhar) */
-      .lucide-github::before { content: 'GH'; font-family: sans-serif; font-weight: bold; }
-      .lucide-linkedin::before { content: 'LI'; font-family: sans-serif; font-weight: bold; }
-      .lucide-instagram::before { content: 'IG'; font-family: sans-serif; font-weight: bold; }
-    </style>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // Configuração do Tailwind (opcional)
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body class="animated-gradient flex items-center justify-center min-h-screen font-sans p-4">
+<body>
 
-    <div class="profile-card bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-10 text-center max-w-lg w-full mx-auto overflow-hidden relative transition-all duration-500 ease-out">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"></div>
+    <header>
+        <nav>
+            <a href="#sobre" class="nav-link">Sobre Mim</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#jornada" class="nav-link">Minha Jornada</a>
+            <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+    </header>
 
-        <div class="mb-6 mt-4">
-             <img 
-                src="image.png"
-                alt="Foto de Iago Diotti"
-                class="foto" style="width: 9rem; height: 9rem; border-radius: 50%; margin: 0 auto; border: 4px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); object-fit: cover; transition: transform 0.3s; display: flex; align-items: flex-start; "
-            >
+    <main>
+        <section id="apresentacao">
+            <div class="container">
+                <h1>Iago Diotti</h1>
+                <h2>Futuro Desenvolvedor & Analista de Sistemas</h2>
+                <p class="subtitulo">Estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia e focado em construir uma carreira sólida na área de desenvolvimento.</p>
+                <a href="#contato" class="cta-button">Vamos Conversar</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Sou o Iago, um entusiasta da tecnologia atualmente no segundo semestre de Análise e Desenvolvimento de Sistemas. Desde que comecei a graduação, meu interesse pela programação só cresce. Gosto de entender como as coisas funcionam e de usar a lógica para criar soluções. Estou sempre em busca de novos conhecimentos e desafios para me desenvolver como profissional.</p>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <div class="container">
+                <h2>Habilidades</h2>
+                <p class="subtitulo-secao">Estas são algumas das tecnologias e conceitos com os quais já tive contato e estou aprofundando meus estudos:</p>
+                <div class="skills-grid">
+                    <div class="skill-card">HTML5</div>
+                    <div class="skill-card">CSS3</div>
+                    <div class="skill-card">JavaScript (ES6)</div>
+                    <div class="skill-card">Git & GitHub</div>
+                    <div class="skill-card">Lógica de Programação</div>
+                    <div class="skill-card">SQL (Básico)</div>
+                    </div>
+            </div>
+        </section>
+        
+        <section id="jornada">
+            <div class="container">
+                <h2>Minha Jornada de Aprendizagem</h2>
+                <p class="subtitulo-secao">Como ainda não tenho projetos complexos, quero compartilhar o que estou construindo e aprendendo. Este próprio site é meu primeiro grande projeto!</p>
+                <div class="jornada-item">
+                    <h3>1. Este Portfólio</h3>
+                    <p><strong>Objetivo:</strong> Criar uma página profissional do zero para apresentar minhas habilidades.</p>
+                    <p><strong>O que aprendi:</strong> Estruturação com HTML semântico, estilização com Flexbox para layout responsivo e o fluxo de trabalho completo com Git e GitHub Pages para publicação.</p>
+                    <p><strong>Tecnologias:</strong> HTML5, CSS3, Git, GitHub.</p>
+                    <a href="https://github.com/IagoDiotti/IagoDiotti.github.io" target="_blank" class="link-externo">Ver o código no GitHub</a>
+                </div>
+                 </div>
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estou aberto a oportunidades de estágio e novos desafios. Vamos nos conectar!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/IagoDiotti/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/IagoDiotti" target="_blank">GitHub</a>
+                <a href="mailto:iagodiotti@gmail.com">Email</a>
+            </div>
         </div>
+    </footer>
 
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 drop-shadow-sm">Iago Diotti</h1>
-         <p class="text-gray-700 mb-8 text-base md:text-lg px-4">Estudante de Análise e Desenvolvimento de Sistemas.</p>
-
-         <div class="skills">
-            <span class="skill-badge">HTML</span>
-            <span class="skill-badge">CSS</span>
-            <span class="skill-badge">Python</span>
-        </div>
-
-        <div class="social-icons">
-            <a href="https://www.instagram.com/iagodiotti" target="_blank">
-              <img src="instagram-brands.svg" alt="Instagram">
-            </a>
-            <a href="https://github.com/IagoDiotti" target="_blank">
-              <img style="font-size: 5px;" src="square-github-brands.svg" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/IagoDiotti/" target="_blank">
-              <img src="linkedin-brands.svg" alt="LinkedIn">
-            </a>
-          </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
