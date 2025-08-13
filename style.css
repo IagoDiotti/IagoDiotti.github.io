@@ -197,9 +197,11 @@ section.visible {
     color: var(--cor-primaria); /* Muda a cor do texto */
 }
 
+/* --- Garanta que este código está no final do seu style.css --- */
+
 /* Seção Estudando Atualmente */
 #estudando {
-    background-color: var(--cor-fundo); /* Cor de fundo um pouco diferente para destacar */
+    background-color: var(--cor-primaria); /* Cor de fundo um pouco diferente para destacar */
 }
 
 .estudando-grid {
@@ -211,7 +213,7 @@ section.visible {
 }
 
 .estudo-card {
-    background-color: var(--cor-primaria); /* Cor de fundo igual ao body */
+    background-color: var(--cor-fundo); /* Cor de fundo igual ao body */
     padding: 30px;
     border: 1px solid #30363d;
     border-radius: 8px;
