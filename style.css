@@ -236,11 +236,12 @@ section.visible {
     }
 }
 
+
 .jornada-imagem {
-    width: 100%;
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
     border-radius: 8px;
-    margin-top: 1rem;
+    margin-top: 1.5rem; 
     border: 1px solid #333;
-    max-height: 400px; /* Ajuste este valor conforme necessário */
-    object-fit: cover; /* Mantém a proporção e corta as bordas se necessário */
 }
