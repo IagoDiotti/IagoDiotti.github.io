@@ -235,3 +235,10 @@ section.visible {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.jornada-imagem {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid #333;
+}
